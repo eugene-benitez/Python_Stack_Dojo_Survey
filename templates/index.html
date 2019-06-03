@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dojo Survey</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="survey">
+            <form action="/result" method="post">
+                Your Name:
+                <input type="text" name="name" value="">
+                <br>
+                Dojo Location:
+                <select name="location">
+                    <option value="Orange County">Orange County</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="New York">New York</option>
+                    <option value="San Francisco">San Francisco</option>
+                </select>
+                <br>
+                Favorite Stack:
+                <select name="stack">
+                    <option value="Python">Python</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="C# / .NET ASP">C# / .NET ASP</option>
+                </select>
+                <br>
+                Comment (optional):
+                <br>
+                <textarea name="comment" rows="10" cols="30">
+                </textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
